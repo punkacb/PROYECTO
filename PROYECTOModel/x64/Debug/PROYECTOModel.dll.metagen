@@ -1,0 +1,454 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly PROYECTOModel, Version=1.0.*, Culture=Todos los idiomas (todos los países): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class PROYECTOModel.ActividadAcademica: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, PROYECTOModel.Horario): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getTipo(): PrivateScope, Public, HideBySig
+    setTipo(String): PrivateScope, Public, HideBySig
+    getHorario(): PrivateScope, Public, HideBySig
+    setHorario(Horario): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Activo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, System.String, System.DateTime, PROYECTOModel.Ambiente): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getCodigo(): PrivateScope, Public, HideBySig
+    setCodigo(String): PrivateScope, Public, HideBySig
+    getNombre(): PrivateScope, Public, HideBySig
+    setNombre(String): PrivateScope, Public, HideBySig
+    getEstado(): PrivateScope, Public, HideBySig
+    setEstado(String): PrivateScope, Public, HideBySig
+    getFechaAdquisicion(): PrivateScope, Public, HideBySig
+    setFechaAdquisicion(DateTime): PrivateScope, Public, HideBySig
+    getAmbiente(): PrivateScope, Public, HideBySig
+    setAmbiente(Ambiente): PrivateScope, Public, HideBySig
+    getMantenimientos(): PrivateScope, Public, HideBySig
+    agregarMantenimiento(Mantenimiento): PrivateScope, Public, HideBySig
+    getIncidencias(): PrivateScope, Public, HideBySig
+    agregarIncidencia(Incidencia): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Persona: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Methods:
+    iniciarSesion(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    cerrarSesion(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    recuperarContrasena(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    getId(): PrivateScope, Public, HideBySig
+    getNombre(): PrivateScope, Public, HideBySig
+    setNombre(String): PrivateScope, Public, HideBySig
+    getApellido(): PrivateScope, Public, HideBySig
+    setApellido(String): PrivateScope, Public, HideBySig
+    getCorreo(): PrivateScope, Public, HideBySig
+    setCorreo(String): PrivateScope, Public, HideBySig
+    getTelefono(): PrivateScope, Public, HideBySig
+    setTelefono(String): PrivateScope, Public, HideBySig
+    getEstado(): PrivateScope, Public, HideBySig
+    setEstado(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    getCredencialQR(): PrivateScope, Public, HideBySig
+    setCredencialQR(CredencialQR): PrivateScope, Public, HideBySig
+    agregarRegistroAcceso(RegistroAcceso): PrivateScope, Public, HideBySig
+    agregarIncidenciaReportada(Incidencia): PrivateScope, Public, HideBySig
+    agregarReserva(ReservaEspacio): PrivateScope, Public, HideBySig
+    agregarEmergenciaReportada(Emergencia): PrivateScope, Public, HideBySig
+    agregarNotificacion(Notificacion): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Administrador: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PROYECTOModel.Persona
+    Void .ctor(System.String, System.String, System.String, System.String, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getCargo(): PrivateScope, Public, HideBySig
+    setCargo(String): PrivateScope, Public, HideBySig
+    agregarRol(Rol): PrivateScope, Public, HideBySig
+    agregarMantenimientoAsignado(Mantenimiento): PrivateScope, Public, HideBySig
+    agregarIncidenciaAsignada(Incidencia): PrivateScope, Public, HideBySig
+    agregarAtencionEmergencia(AtencionEmergencia): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Alumno: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PROYECTOModel.Persona
+    Void .ctor(System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getCodigoEstudiante(): PrivateScope, Public, HideBySig
+    setCodigoEstudiante(String): PrivateScope, Public, HideBySig
+    getCiclo(): PrivateScope, Public, HideBySig
+    setCiclo(String): PrivateScope, Public, HideBySig
+    agregarInscripcion(Inscripcion): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Ambiente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, Int32, PROYECTOModel.Piso): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getNombre(): PrivateScope, Public, HideBySig
+    setNombre(String): PrivateScope, Public, HideBySig
+    getTipo(): PrivateScope, Public, HideBySig
+    setTipo(String): PrivateScope, Public, HideBySig
+    getCapacidad(): PrivateScope, Public, HideBySig
+    setCapacidad(Int32): PrivateScope, Public, HideBySig
+    getPiso(): PrivateScope, Public, HideBySig
+    setPiso(Piso): PrivateScope, Public, HideBySig
+    getControlAforo(): PrivateScope, Public, HideBySig
+    setControlAforo(ControlAforo): PrivateScope, Public, HideBySig
+    getActivos(): PrivateScope, Public, HideBySig
+    agregarActivo(Activo): PrivateScope, Public, HideBySig
+    getRegistrosAcceso(): PrivateScope, Public, HideBySig
+    agregarRegistroAcceso(RegistroAcceso): PrivateScope, Public, HideBySig
+    getHorarios(): PrivateScope, Public, HideBySig
+    agregarHorario(Horario): PrivateScope, Public, HideBySig
+    getReservas(): PrivateScope, Public, HideBySig
+    agregarReserva(ReservaEspacio): PrivateScope, Public, HideBySig
+    getEmergencias(): PrivateScope, Public, HideBySig
+    agregarEmergencia(Emergencia): PrivateScope, Public, HideBySig
+    getRutasEvacuacion(): PrivateScope, Public, HideBySig
+    agregarRutaEvacuacion(RutaEvacuacion): PrivateScope, Public, HideBySig
+Class PROYECTOModel.AtencionEmergencia: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.DateTime, System.DateTime, System.DateTime, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getHoraAceptacion(): PrivateScope, Public, HideBySig
+    setHoraAceptacion(DateTime): PrivateScope, Public, HideBySig
+    getHoraLlegada(): PrivateScope, Public, HideBySig
+    setHoraLlegada(DateTime): PrivateScope, Public, HideBySig
+    getHoraResolucion(): PrivateScope, Public, HideBySig
+    setHoraResolucion(DateTime): PrivateScope, Public, HideBySig
+    getEstado(): PrivateScope, Public, HideBySig
+    setEstado(String): PrivateScope, Public, HideBySig
+    getEmergencia(): PrivateScope, Public, HideBySig
+    setEmergencia(Emergencia): PrivateScope, Public, HideBySig
+    getAdministrador(): PrivateScope, Public, HideBySig
+    setAdministrador(Administrador): PrivateScope, Public, HideBySig
+Class PROYECTOModel.CheckInClase: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.DateTime, System.TimeSpan, PROYECTOModel.Horario): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getFecha(): PrivateScope, Public, HideBySig
+    setFecha(DateTime): PrivateScope, Public, HideBySig
+    getHoraCheckIn(): PrivateScope, Public, HideBySig
+    setHoraCheckIn(TimeSpan): PrivateScope, Public, HideBySig
+    getHoraCheckOut(): PrivateScope, Public, HideBySig
+    setHoraCheckOut(TimeSpan): PrivateScope, Public, HideBySig
+    getHorario(): PrivateScope, Public, HideBySig
+    setHorario(Horario): PrivateScope, Public, HideBySig
+Class PROYECTOModel.ControlAforo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getCapacidadMaxima(): PrivateScope, Public, HideBySig
+    getOcupacionActual(): PrivateScope, Public, HideBySig
+    getPorcentajeAlerta(): PrivateScope, Public, HideBySig
+    getAmbiente(): PrivateScope, Public, HideBySig
+    setCapacidadMaxima(Int32): PrivateScope, Public, HideBySig
+    setOcupacionActual(Int32): PrivateScope, Public, HideBySig
+    setPorcentajeAlerta(Double): PrivateScope, Public, HideBySig
+    setAmbiente(Ambiente): PrivateScope, Public, HideBySig
+    verificarAforo(): PrivateScope, Public, HideBySig
+    incrementar(): PrivateScope, Public, HideBySig
+    decrementar(): PrivateScope, Public, HideBySig
+Class PROYECTOModel.CredencialQR: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, PROYECTOModel.Persona): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getCodigo(): PrivateScope, Public, HideBySig
+    setCodigo(String): PrivateScope, Public, HideBySig
+    getFechaGeneracion(): PrivateScope, Public, HideBySig
+    setFechaGeneracion(DateTime): PrivateScope, Public, HideBySig
+    getFechaExpiracion(): PrivateScope, Public, HideBySig
+    setFechaExpiracion(DateTime): PrivateScope, Public, HideBySig
+    getVigente(): PrivateScope, Public, HideBySig
+    setVigente(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    getSincronizado(): PrivateScope, Public, HideBySig
+    setSincronizado(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    getPersona(): PrivateScope, Public, HideBySig
+    setPersona(Persona): PrivateScope, Public, HideBySig
+    generar(): PrivateScope, Public, HideBySig
+    validar(): PrivateScope, Public, HideBySig
+    refrescar(): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Docente: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PROYECTOModel.Persona
+    Void .ctor(System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getCodigoDocente(): PrivateScope, Public, HideBySig
+    setCodigoDocente(String): PrivateScope, Public, HideBySig
+    getDepartamento(): PrivateScope, Public, HideBySig
+    setDepartamento(String): PrivateScope, Public, HideBySig
+    agregarHorario(Horario): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Emergencia: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.DateTime, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    reportar(): PrivateScope, Public, HideBySig
+    escalar(): PrivateScope, Public, HideBySig
+    getFechaHora(): PrivateScope, Public, HideBySig
+    setFechaHora(DateTime): PrivateScope, Public, HideBySig
+    getTipo(): PrivateScope, Public, HideBySig
+    setTipo(String): PrivateScope, Public, HideBySig
+    getEstado(): PrivateScope, Public, HideBySig
+    setEstado(String): PrivateScope, Public, HideBySig
+    getUbicacionGPS(): PrivateScope, Public, HideBySig
+    setUbicacionGPS(String): PrivateScope, Public, HideBySig
+    getPersona(): PrivateScope, Public, HideBySig
+    setPersona(Persona): PrivateScope, Public, HideBySig
+    getAmbiente(): PrivateScope, Public, HideBySig
+    setAmbiente(Ambiente): PrivateScope, Public, HideBySig
+    getSensor(): PrivateScope, Public, HideBySig
+    setSensor(Sensor): PrivateScope, Public, HideBySig
+    getAtencion(): PrivateScope, Public, HideBySig
+    setAtencion(AtencionEmergencia): PrivateScope, Public, HideBySig
+    getInstitucionesExternas(): PrivateScope, Public, HideBySig
+    setInstitucionesExternas(List`1): PrivateScope, Public, HideBySig
+Class PROYECTOModel.EquipoSeguridad: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PROYECTOModel.Activo
+    Void .ctor(System.String, System.String, System.String, System.DateTime, PROYECTOModel.Ambiente): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    activar(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class PROYECTOModel.EquipoExtincion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PROYECTOModel.EquipoSeguridad
+    Void .ctor(System.String, System.String, System.String, System.DateTime, PROYECTOModel.Ambiente, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getTipoAgente(): PrivateScope, Public, HideBySig
+    setTipoAgente(String): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Facultad: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getNombre(): PrivateScope, Public, HideBySig
+    setNombre(String): PrivateScope, Public, HideBySig
+    getUbicacion(): PrivateScope, Public, HideBySig
+    setUbicacion(String): PrivateScope, Public, HideBySig
+    getPisos(): PrivateScope, Public, HideBySig
+    getSimulacros(): PrivateScope, Public, HideBySig
+    agregarPiso(Piso): PrivateScope, Public, HideBySig
+    agregarSimulacro(Simulacro): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Inscripcion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(PROYECTOModel.Alumno, PROYECTOModel.Horario): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getFechaInscripcion(): PrivateScope, Public, HideBySig
+    setFechaInscripcion(DateTime): PrivateScope, Public, HideBySig
+    getEstado(): PrivateScope, Public, HideBySig
+    setEstado(String): PrivateScope, Public, HideBySig
+    getAlumno(): PrivateScope, Public, HideBySig
+    setAlumno(Alumno): PrivateScope, Public, HideBySig
+    getHorario(): PrivateScope, Public, HideBySig
+    setHorario(Horario): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Horario: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.TimeSpan, System.TimeSpan): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getDia(): PrivateScope, Public, HideBySig
+    setDia(String): PrivateScope, Public, HideBySig
+    getHoraInicio(): PrivateScope, Public, HideBySig
+    setHoraInicio(TimeSpan): PrivateScope, Public, HideBySig
+    getHoraFin(): PrivateScope, Public, HideBySig
+    setHoraFin(TimeSpan): PrivateScope, Public, HideBySig
+    getAmbiente(): PrivateScope, Public, HideBySig
+    setAmbiente(Ambiente): PrivateScope, Public, HideBySig
+    getDocente(): PrivateScope, Public, HideBySig
+    setDocente(Docente): PrivateScope, Public, HideBySig
+    getActividad(): PrivateScope, Public, HideBySig
+    setActividad(ActividadAcademica): PrivateScope, Public, HideBySig
+    getCheckIns(): PrivateScope, Public, HideBySig
+    agregarInscripcion(Inscripcion): PrivateScope, Public, HideBySig
+    agregarCheckIn(CheckInClase): PrivateScope, Public, HideBySig
+    esValido(): PrivateScope, Public, HideBySig
+    verificarConflicto(Horario): PrivateScope, Public, HideBySig
+    conflictoPorAmbiente(Horario): PrivateScope, Public, HideBySig
+    conflictoPorDocente(Horario): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Incidencia: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.DateTime, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getFecha(): PrivateScope, Public, HideBySig
+    setFecha(DateTime): PrivateScope, Public, HideBySig
+    getDescripcion(): PrivateScope, Public, HideBySig
+    setDescripcion(String): PrivateScope, Public, HideBySig
+    getEstado(): PrivateScope, Public, HideBySig
+    setEstado(String): PrivateScope, Public, HideBySig
+    getPrioridad(): PrivateScope, Public, HideBySig
+    setPrioridad(String): PrivateScope, Public, HideBySig
+    getActivo(): PrivateScope, Public, HideBySig
+    setActivo(Activo): PrivateScope, Public, HideBySig
+    getReportante(): PrivateScope, Public, HideBySig
+    setReportante(Persona): PrivateScope, Public, HideBySig
+    getTecnicoAsignado(): PrivateScope, Public, HideBySig
+    setTecnicoAsignado(Administrador): PrivateScope, Public, HideBySig
+    getNotificaciones(): PrivateScope, Public, HideBySig
+    setNotificaciones(List`1): PrivateScope, Public, HideBySig
+Class PROYECTOModel.InstitucionExterna: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    contactar(): PrivateScope, Public, HideBySig
+    enviarDatosAPI(): PrivateScope, Public, HideBySig
+    getNombre(): PrivateScope, Public, HideBySig
+    setNombre(String): PrivateScope, Public, HideBySig
+    getTipo(): PrivateScope, Public, HideBySig
+    setTipo(String): PrivateScope, Public, HideBySig
+    getTelefono(): PrivateScope, Public, HideBySig
+    setTelefono(String): PrivateScope, Public, HideBySig
+    getEmergencias(): PrivateScope, Public, HideBySig
+    setEmergencias(List`1): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Mantenimiento: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.DateTime, System.String, System.String, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getFecha(): PrivateScope, Public, HideBySig
+    setFecha(DateTime): PrivateScope, Public, HideBySig
+    getTipo(): PrivateScope, Public, HideBySig
+    setTipo(String): PrivateScope, Public, HideBySig
+    getDescripcion(): PrivateScope, Public, HideBySig
+    setDescripcion(String): PrivateScope, Public, HideBySig
+    getCosto(): PrivateScope, Public, HideBySig
+    setCosto(Double): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Notificacion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, PROYECTOModel.Persona, PROYECTOModel.Incidencia): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getMensaje(): PrivateScope, Public, HideBySig
+    getCanal(): PrivateScope, Public, HideBySig
+    getLeido(): PrivateScope, Public, HideBySig
+    getPersona(): PrivateScope, Public, HideBySig
+    getIncidencia(): PrivateScope, Public, HideBySig
+    setMensaje(String): PrivateScope, Public, HideBySig
+    setCanal(String): PrivateScope, Public, HideBySig
+    setLeido(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    setPersona(Persona): PrivateScope, Public, HideBySig
+    setIncidencia(Incidencia): PrivateScope, Public, HideBySig
+Class PROYECTOModel.NotificacionMasiva: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, System.String, PROYECTOModel.Persona): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getMensaje(): PrivateScope, Public, HideBySig
+    getFechaEnvio(): PrivateScope, Public, HideBySig
+    getCanal(): PrivateScope, Public, HideBySig
+    getAlcance(): PrivateScope, Public, HideBySig
+    getEmisor(): PrivateScope, Public, HideBySig
+    getDestinatarios(): PrivateScope, Public, HideBySig
+    setMensaje(String): PrivateScope, Public, HideBySig
+    setCanal(String): PrivateScope, Public, HideBySig
+    setAlcance(String): PrivateScope, Public, HideBySig
+    setEmisor(Persona): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Permiso: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getIdPermiso(): PrivateScope, Public, HideBySig
+    setIdPermiso(String): PrivateScope, Public, HideBySig
+    getNombre(): PrivateScope, Public, HideBySig
+    setNombre(String): PrivateScope, Public, HideBySig
+    getDescripcion(): PrivateScope, Public, HideBySig
+    setDescripcion(String): PrivateScope, Public, HideBySig
+    agregarRol(Rol): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Piso: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, System.String, PROYECTOModel.Facultad): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getNumero(): PrivateScope, Public, HideBySig
+    setNumero(Int32): PrivateScope, Public, HideBySig
+    getDescripcion(): PrivateScope, Public, HideBySig
+    setDescripcion(String): PrivateScope, Public, HideBySig
+    getFacultad(): PrivateScope, Public, HideBySig
+    setFacultad(Facultad): PrivateScope, Public, HideBySig
+    getAmbientes(): PrivateScope, Public, HideBySig
+    agregarAmbiente(Ambiente): PrivateScope, Public, HideBySig
+Class PROYECTOModel.RegistroAcceso: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(PROYECTOModel.Persona, PROYECTOModel.Ambiente, PROYECTOModel.CredencialQR, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getFechaHora(): PrivateScope, Public, HideBySig
+    setFechaHora(DateTime): PrivateScope, Public, HideBySig
+    getTipoMovimiento(): PrivateScope, Public, HideBySig
+    setTipoMovimiento(String): PrivateScope, Public, HideBySig
+    getResultado(): PrivateScope, Public, HideBySig
+    setResultado(String): PrivateScope, Public, HideBySig
+    getPersona(): PrivateScope, Public, HideBySig
+    setPersona(Persona): PrivateScope, Public, HideBySig
+    getAmbiente(): PrivateScope, Public, HideBySig
+    setAmbiente(Ambiente): PrivateScope, Public, HideBySig
+    getCredencialQR(): PrivateScope, Public, HideBySig
+    setCredencialQR(CredencialQR): PrivateScope, Public, HideBySig
+    registrarIngreso(ControlAforo): PrivateScope, Public, HideBySig
+    registrarSalida(ControlAforo): PrivateScope, Public, HideBySig
+Class PROYECTOModel.ReporteAnalitica: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getTipoReporte(): PrivateScope, Public, HideBySig
+    getFechaGeneracion(): PrivateScope, Public, HideBySig
+    getFiltroFacultad(): PrivateScope, Public, HideBySig
+    getFiltroFecha(): PrivateScope, Public, HideBySig
+    setTipoReporte(String): PrivateScope, Public, HideBySig
+    setFiltroFacultad(String): PrivateScope, Public, HideBySig
+    setFiltroFecha(String): PrivateScope, Public, HideBySig
+    generarDashboardUso(): PrivateScope, Public, HideBySig
+    generarReporteTiemposRespuesta(): PrivateScope, Public, HideBySig
+Class PROYECTOModel.ReservaEspacio: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.DateTime, System.TimeSpan, System.TimeSpan, System.String, PROYECTOModel.Ambiente, PROYECTOModel.Persona): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getFecha(): PrivateScope, Public, HideBySig
+    setFecha(DateTime): PrivateScope, Public, HideBySig
+    getHoraInicio(): PrivateScope, Public, HideBySig
+    setHoraInicio(TimeSpan): PrivateScope, Public, HideBySig
+    getHoraFin(): PrivateScope, Public, HideBySig
+    setHoraFin(TimeSpan): PrivateScope, Public, HideBySig
+    getMotivo(): PrivateScope, Public, HideBySig
+    setMotivo(String): PrivateScope, Public, HideBySig
+    getEstado(): PrivateScope, Public, HideBySig
+    setEstado(String): PrivateScope, Public, HideBySig
+    getAmbiente(): PrivateScope, Public, HideBySig
+    setAmbiente(Ambiente): PrivateScope, Public, HideBySig
+    getPersona(): PrivateScope, Public, HideBySig
+    setPersona(Persona): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Rol: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getIdRol(): PrivateScope, Public, HideBySig
+    setIdRol(String): PrivateScope, Public, HideBySig
+    getNombre(): PrivateScope, Public, HideBySig
+    setNombre(String): PrivateScope, Public, HideBySig
+    agregarPermiso(Permiso): PrivateScope, Public, HideBySig
+Class PROYECTOModel.RutaEvacuacion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getTipoSiniestro(): PrivateScope, Public, HideBySig
+    setTipoSiniestro(String): PrivateScope, Public, HideBySig
+    getDescripcionRuta(): PrivateScope, Public, HideBySig
+    setDescripcionRuta(String): PrivateScope, Public, HideBySig
+    getAmbientes(): PrivateScope, Public, HideBySig
+    setAmbientes(List`1): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Sensor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :PROYECTOModel.EquipoSeguridad
+    Void .ctor(System.String, System.String, System.String, System.DateTime, PROYECTOModel.Ambiente, System.String, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getTipoSensor(): PrivateScope, Public, HideBySig
+    setTipoSensor(String): PrivateScope, Public, HideBySig
+    getUmbral(): PrivateScope, Public, HideBySig
+    setUmbral(Double): PrivateScope, Public, HideBySig
+    getEmergencias(): PrivateScope, Public, HideBySig
+    agregarEmergencia(Emergencia): PrivateScope, Public, HideBySig
+    leerValor(): PrivateScope, Public, HideBySig
+Class PROYECTOModel.Simulacro: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.DateTime, System.String, Double, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    getFechaHora(): PrivateScope, Public, HideBySig
+    setFechaHora(DateTime): PrivateScope, Public, HideBySig
+    getTipoSiniestro(): PrivateScope, Public, HideBySig
+    setTipoSiniestro(String): PrivateScope, Public, HideBySig
+    getTiempoEvacuacion(): PrivateScope, Public, HideBySig
+    setTiempoEvacuacion(Double): PrivateScope, Public, HideBySig
+    getNumeroParticipantes(): PrivateScope, Public, HideBySig
+    setNumeroParticipantes(Int32): PrivateScope, Public, HideBySig
+    getFacultades(): PrivateScope, Public, HideBySig
+    setFacultades(List`1): PrivateScope, Public, HideBySig

@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="../PROYECTOVIEW/PROYECTOVIEW.vcxproj" />
+  <Project Path="PROYECTOModel.vcxproj" />
+</Solution>

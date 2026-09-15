@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\juanc\\Downloads\\waza\\PROYECTOModel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5E8C8C3A-33B0-CE5C-2BC0-FF71A05FB347}|..\\PROYECTOVIEW\\PROYECTOVIEW.vcxproj|C:\\Users\\juanc\\Downloads\\waza\\PROYECTOVIEW\\PROYECTOVIEW.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PROYECTOVIEW.cpp",
+              "DocumentMoniker": "C:\\Users\\juanc\\Downloads\\waza\\PROYECTOVIEW\\PROYECTOVIEW.cpp",
+              "RelativeDocumentMoniker": "..\\PROYECTOVIEW\\PROYECTOVIEW.cpp",
+              "ToolTip": "C:\\Users\\juanc\\Downloads\\waza\\PROYECTOVIEW\\PROYECTOVIEW.cpp",
+              "RelativeToolTip": "..\\PROYECTOVIEW\\PROYECTOVIEW.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-09-15T19:30:43.091Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

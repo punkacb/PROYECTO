@@ -1,0 +1,12 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\juanc\\downloads\\waza\\proyectoview\\proyectoview.cpp",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\juanc\\downloads\\waza\\proyectoview\\pch.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

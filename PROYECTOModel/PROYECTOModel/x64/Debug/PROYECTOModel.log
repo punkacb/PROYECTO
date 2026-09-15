@@ -1,0 +1,39 @@
+﻿  pch.cpp
+  ActividadAcademica.cpp
+  Activo.cpp
+  Administrador.cpp
+  Alumno.cpp
+  Ambiente.cpp
+  AssemblyInfo.cpp
+  AtencionEmergencia.cpp
+  CheckInClase.cpp
+  ControlAforo.cpp
+  CredencialQR.cpp
+  Docente.cpp
+  Emergencia.cpp
+  EquipoExtincion.cpp
+  EquipoSeguridad.cpp
+  Facultad.cpp
+  Horario.cpp
+  Incidencia.cpp
+  Inscripcion.cpp
+  InstitucionExterna.cpp
+  Mantenimiento.cpp
+  Generando código...
+  Compilando...
+  Notificacion.cpp
+  NotificacionMasiva.cpp
+  Permiso.cpp
+  Persona.cpp
+  Piso.cpp
+  RegistroAcceso.cpp
+  ReporteAnalitica.cpp
+  ReservaEspacio.cpp
+  Rol.cpp
+  RutaEvacuacion.cpp
+  Sensor.cpp
+  Simulacro.cpp
+  Generando código...
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  ActividadAcademica.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  PROYECTOModel.vcxproj -> C:\Users\juanc\Downloads\waza\PROYECTOModel\x64\Debug\PROYECTOModel.dll
